@@ -1,8 +1,11 @@
-// Create a new note
-
-	document.getElementById('btnNew').addEventListener("click", function() {
-	document.getElementById('newNote').innerHTML = 'it works';
+// CREATE A NEW NOTE
+// New textarea shows up when clicked new button
+	document.addEventListener("click", function() {
+	document.querySelector('.new-note').style.display = 'block';
 });
 
-// Edit the note
-// Delete the note
+// SAVE THE NOTE
+
+// EDIT THE NOTE
+
+// DELETE THE NOTE
