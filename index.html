@@ -3,21 +3,25 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Notes App</title>
+	<title>Note App</title>
 </head>
 <body>
 	<h1>Simple Note App</h1>
 	<p>Create, save, edit your notes in this minimalist note app</p>
 
-	<button>New</button>
+	<button class="new-button">New</button>
 	
-	<div class="new-note" style="display: none;">
-		<textarea></textarea><br>
-		<button class="save-button">Save</button>
+	<div class="new-note">
+		<textarea id="myInput"></textarea><br>
+		<span onclick="newElement()" class="save-button">Save</span>
 		<button class="delete-button">Delete</button>
 	</div>
-	
+
+	<ul id="myNotes">
+		
+	</ul>
 	<!-- End of creating a new note -->
+
 <script src="main.js"></script>
 
 

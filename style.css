@@ -1,0 +1,35 @@
+.save-button {
+  padding: 10px;
+  width: 25%;
+  background: #000000;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.delete-button {
+  padding: 10px;
+  background: #000000;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  border: none;
+}
+
+.new-button {
+  padding: 10px;
+  background: #000000;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  border: none;
+}
