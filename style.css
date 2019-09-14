@@ -1,3 +1,8 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 .save-button {
   padding: 10px;
   width: 25%;
@@ -32,4 +37,27 @@
   transition: 0.3s;
   border-radius: 0;
   border: none;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
 }
