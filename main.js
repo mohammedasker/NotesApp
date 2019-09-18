@@ -17,18 +17,18 @@
 			document.querySelector("#myNotes").appendChild(li);
 		}
 		document.querySelector("#myInput").value = '';
-		// Spawn close button for each note
-		let span = document.createElement("span");
-		text = document.createTextNode("\u00D7");
-		span.className = "close";
-		span.appendChild(text);
-		li.appendChild(span);
 		// Span edit button for each note
 		let spanTwo = document.createElement("span");
 	    textTwo = document.createTextNode(":");
 	    spanTwo.className = "edit";
 	    spanTwo.appendChild(textTwo);
 	    li.appendChild(spanTwo);
+		// Spawn close button for each note
+		let span = document.createElement("span");
+		text = document.createTextNode("\u00D7");
+		span.className = "close";
+		span.appendChild(text);
+		li.appendChild(span);
 		// Hide a saved note when clicked close button
 		for (i = 0; i < close.length; i++){
 			close[i].onclick = function() {
