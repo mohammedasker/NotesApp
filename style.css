@@ -5,7 +5,7 @@ ul {
 }
 
 /* Style the button*/
-.delete-button, .new-button, .save-button {
+.delete-button, .new-button, .save-button, .edit-button {
   padding: 10px;
   background: #000000;
   color: white;

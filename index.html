@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>Note App</title>
 </head>
-<body>
+<body onload="checkEdits()">
 	<h1>Simple Note App</h1>
 	<p>Create, save, edit your notes in this minimalist note app</p>
 
@@ -15,10 +15,13 @@
 		<textarea id="myInput"></textarea><br>
 		<span onclick="newElement()" class="save-button">Save</span>
 		<button onclick="clearElement()" class="delete-button">Clear</button>
+		<button onclick="saveEdits()" class="edit-button">Edit</button>
 	</div>
 
 	<h3>Saved Notes</h3>
-	<ul id="myNotes">
+	<div id="update"></div>
+	<div id="saved-notes"></div>
+	<ul id="myNotes" contenteditable="true">
 	</ul>
 
 <script src="main.js"></script>
