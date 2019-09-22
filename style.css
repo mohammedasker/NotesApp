@@ -1,4 +1,4 @@
-/**/
+/* Remove margin and padding from the note */
 ul {
   margin: 0;
   padding: 0;
@@ -17,7 +17,7 @@ ul {
   border: none;
 }
 
-/* Style the notes*/
+/* Style the notes */
 ul li {
   cursor: pointer;
   position: relative;
