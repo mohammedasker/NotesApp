@@ -82,24 +82,14 @@
 		editElement = document.querySelector("#myNotes");
 		// Get the edited element content
 		let userVersion = editElement.innerHTML;
-		userVersion = editElement.style;
-		console.log(userVersion);
 		// Save the content to local storage
 		localStorage.userEdits = userVersion;
 		// Write a confirmation to the user
 		document.querySelector("#update").innerHTML = "Edits saved";
-
-		style = document.querySelector("saved-notes");
-		let computedStyle = window.getComputedStyle(el, null);
-		forEach (prop in style)
-			if (elementStyle.hasOwnProperty(prop)) {
-				console.log(prop + " " + style[prop] + "" + computedStyle[prop]);
-		}
 	}
 
 // Check if user has previously saved edits
 	function checkEdits() {
 		if(localStorage.userEdits != null)
 			document.querySelector("#saved-notes").innerHTML = localStorage.userEdits;
-			document.querySelector("#myNotes").style = localStorage.userEdits;
 	}
