@@ -36,6 +36,13 @@
 				div.style.display = "none";
 			}
 		}
+	    // Make notes editable when clicked edit button
+		let noteEditable = document.querySelector("#myNotes").contentEditable;
+		if (noteEditable == 'inherit' || noteEditable == 'false') {
+			document.querySelector("#myNotes").contentEditable = true;
+		} else {
+			document.querySelector("#myNotes").contentEditable = false;
+		    }
 	}
 
 // DELETE THE NOTE
@@ -62,9 +69,23 @@
 		close[i].onclick = function() {
 		let div = this.parentElement;
 		div.style.display = "none";
-		}
+	   }
 	}
 // EDIT THE NOTE
+// Click the edit button to edit notes
+	let edit = document.getElementsByClassName("edit");
+	i;
+	for (i = 0; i < edit.length; i++){
+		edit[i].onclick = function() {
+		let div = this.parentElement;
+		let noteEditable = document.querySelector("#myNotes").contentEditable;
+		if (noteEditable == 'inherit' || noteEditable == 'false') {
+			document.querySelector("#myNotes").contentEditable = true;
+		} else {
+			document.querySelector("#myNotes").contentEditable = false;
+		}
+	  }
+	}
 // Create edit button and append it to each note
 	nodeList = document.getElementsByTagName("li");
 	i;
@@ -87,7 +108,6 @@
 		// Write a confirmation to the user
 		document.querySelector("#update").innerHTML = "Edits saved";
 	}
-
 // Check if user has previously saved edits
 	function checkEdits() {
 		if(localStorage.userEdits != null)
