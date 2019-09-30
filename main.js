@@ -36,15 +36,21 @@
 				div.style.display = "none";
 			}
 		}
-	    // Make notes editable when clicked edit button
+	     for (i = 0; i < edit.length; i++){
+		edit[i].onclick = function() {
+		let div = this.parentElement;
+		// Make notes editable when clicked edit button
 		let noteEditable = document.querySelector("#myNotes").contentEditable;
 		if (noteEditable == 'inherit' || noteEditable == 'false') {
 			document.querySelector("#myNotes").contentEditable = true;
+			textTwo.nodeValue = '✓';
 		} else {
 			document.querySelector("#myNotes").contentEditable = false;
-		    }
+			textTwo.nodeValue = ':';
+		  }
+	    }
+	  }
 	}
-
 // DELETE THE NOTE
 // Clear inputs on the text area
 	function clearElement() {
@@ -81,8 +87,10 @@
 		let noteEditable = document.querySelector("#myNotes").contentEditable;
 		if (noteEditable == 'inherit' || noteEditable == 'false') {
 			document.querySelector("#myNotes").contentEditable = true;
+			textTwo.nodeValue = '✓';
 		} else {
 			document.querySelector("#myNotes").contentEditable = false;
+			textTwo.nodeValue = ':';
 		}
 	  }
 	}
@@ -96,6 +104,7 @@
 	  spanTwo.appendChild(text);
 	  nodeList[i].appendChild(span);
 	}
+// STORE SAVED NOTES IN LOCAL STORAGE
 // Open and edit the saved note when clicked the edit button
 	function saveEdits() {
 		// Get the editable element
