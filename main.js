@@ -119,6 +119,28 @@
 	}
 // Check if user has previously saved edits
 	function checkEdits() {
+		let textTwo = document.createTextNode("✓");
 		if(localStorage.userEdits != null)
 			document.querySelector("#saved-notes").innerHTML = localStorage.userEdits;
+		// Hide a saved note when clicked close button
+		for (i = 0; i < close.length; i++){
+			close[i].onclick = function() {
+				let div = this.parentElement;
+				div.style.display = "none";
+			}
+		}
+	    for (i = 0; i < edit.length; i++){
+		edit[i].onclick = function() {
+		let div = this.parentElement;
+		// Make notes editable when clicked edit button
+		let noteEditable = document.querySelector("#myNotes").contentEditable;
+		if (noteEditable == 'inherit' || noteEditable == 'false') {
+			document.querySelector("#myNotes").contentEditable = true;
+			textTwo.nodeValue = '✓';
+		} else {
+			document.querySelector("#myNotes").contentEditable = false;
+			textTwo.nodeValue = ':';
+		  }
+	    }
+	  }
 	}
