@@ -19,7 +19,7 @@
 		document.querySelector("#myInput").value = '';
 		// Span edit button for each note
 		let spanTwo = document.createElement("span");
-	    textTwo = document.createTextNode(":");
+	    textTwo = document.createTextNode("✓");
 	    spanTwo.className = "edit";
 	    spanTwo.appendChild(textTwo);
 	    li.appendChild(spanTwo);
@@ -99,7 +99,7 @@
 	i;
 	for (i = 0; i < nodeList.length; i++){
 	  spanTwo = createElement("span");
-	  textTwo = document.createTextNode(":");
+	  textTwo = document.createTextNode("✓");
 	  spanTwo.className = "edit";
 	  spanTwo.appendChild(text);
 	  nodeList[i].appendChild(span);
