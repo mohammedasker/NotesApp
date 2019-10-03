@@ -1,12 +1,6 @@
-// CREATE A NEW NOTE
-// An input and buttons shows up when clicked a new button
-	document.addEventListener("click", function() {
-	document.querySelector('.new-note').style.display = 'block';
-});
-
 // SAVE THE NOTE
 // Save a note when clicked the save button
-	function newElement() {
+	document.querySelector(".save-button").addEventListener("click", function() {
 		let li = document.createElement("li");
 		let inputvalue = document.querySelector("#myInput").value;
 		let savedNote = document.createTextNode(inputvalue);
@@ -50,12 +44,12 @@
 		  }
 	    }
 	  }
-	}
+	});
 // DELETE THE NOTE
 // Clear inputs on the text area
-	function clearElement() {
+	document.querySelector(".delete-button").addEventListener("click", function() {
 		document.querySelector("#myInput").value = '';
-	}
+	});
 
 // Create close button and append it to each note
 	let nodeList = document.getElementsByTagName("li");
@@ -106,7 +100,7 @@
 	}
 // STORE SAVED NOTES IN LOCAL STORAGE
 // Open and edit the saved note when clicked the edit button
-	function saveEdits() {
+	document.querySelector(".save-button").addEventListener("click", function() {
 		// Get the editable element
 		let editElement = document.querySelector("#saved-notes");
 		editElement = document.querySelector("#myNotes");
@@ -116,7 +110,7 @@
 		localStorage.userEdits = userVersion;
 		// Write a confirmation to the user
 		document.querySelector("#update").innerHTML = "Edits saved";
-	}
+	});
 // Check if user has previously saved edits
 	function checkEdits() {
 		let textTwo = document.createTextNode("✓");

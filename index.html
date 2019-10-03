@@ -7,22 +7,25 @@
 </head>
 <body onload="checkEdits()">
 	<h1>Simple Note App</h1>
-	<p>Create, save, edit your notes in this minimalist note app</p>
+	<p>Create, save, edit your notes in this minimalist note-taking app</p>
 
-	<button class="new-button">New</button>
+	<div class="buttons">
+	<button class="save-button">Create</button>
+	<button class="delete-button">Clear</button>
+	<button class="edit-button">Save</button>
+	</div>
 	
 	<div id="myDiv" class="new-note">
-		<textarea id="myInput"></textarea><br>
-		<span onclick="newElement()" class="save-button">Save</span>
-		<button onclick="clearElement()" class="delete-button">Clear</button>
-		<button onclick="saveEdits()" class="edit-button">Edit</button>
+		<textarea id="myInput" placeholder="What's on your mind?"></textarea>
 	</div>
 
-	<h3>Saved Notes</h3>
+	<div class="notespace">
+	<h3>Saved notes</h3>
 	<div id="update"></div>
 	<ul id="saved-notes"></ul>
 	<ul id="myNotes" contenteditable="true">
 	</ul>
+	</div>
 
 <script src="main.js"></script>
 
