@@ -25,7 +25,7 @@ h1, h3, p {
 textarea {
   margin: 0;
   border-radius: 0;
-  width: 98%;
+  width: 97.5%;
   height: 75px;
   padding: 10px;
   float: left;
@@ -94,6 +94,6 @@ ul li:nth-child(odd){
 
 @media(max-width: 768px){
   textarea {
-    width: 95%;
+    width: 94%;
   }
 }
