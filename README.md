@@ -21,13 +21,15 @@ Here's what the user can do with the app.
 
 5. A saved note can be stored in the local storage by pressing the "Save" button. A message reading "Edits saved" will appear. When a page is refreshed or closed the tab, the saved notes is still there.
 
-## Issues that need to solved
+## Issues that need to be fixed
 
 As a beginner programmer, there are a lot of things that can be improved to this project and they are included, but not limited to:
 
 -  When a note is created, it should be uneditable by default. You'll notice the button on the right is tick mark and it's already editable. Consequently, when you delete the note when there is tick mark, the blank page is still editable as well.
 
-- Design problem - If you look carefully both in my source code and the app itself, you'll see that the textarea and note lists are not perfectly aligned together and they're off by few meters on the right side of the screen. There's got to be better way to do it without manually tweaking the code until it looks better. (If you still don't get the problem, I'll attach a photo below shortly).
+- If you look carefully both in my source code and the app itself, you'll see that the textarea and note lists are not perfectly aligned together and they're off by few meters on the right side of the screen. There's got to be better way to do it without manually tweaking the code until it looks better. (If you still don't get the problem yet, I'll attach a photo below shortly).
+
+- When clicking the edit button, only one of them is toggling tick to colon and vice-versa. It should have worked on all the notes.
 
 #### Any further comments and suggestions to make the project better are appreicated.
 

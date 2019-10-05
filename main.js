@@ -44,7 +44,8 @@
 		  }
 	    }
 	  }
-	};
+	}
+
 // DELETE THE NOTE
 // Clear inputs on the text area
 	function clearElement() {
@@ -71,6 +72,7 @@
 		div.style.display = "none";
 	   }
 	}
+
 // EDIT THE NOTE
 // Click the edit button to edit notes
 	let edit = document.getElementsByClassName("edit");
@@ -88,6 +90,7 @@
 		}
 	  }
 	}
+
 // Create edit button and append it to each note
 	nodeList = document.getElementsByTagName("li");
 	i;
@@ -98,6 +101,7 @@
 	  spanTwo.appendChild(text);
 	  nodeList[i].appendChild(span);
 	}
+
 // STORE SAVED NOTES IN LOCAL STORAGE
 // Open and edit the saved note when clicked the edit button
 	function saveNote() {
@@ -109,9 +113,11 @@
 		// Save the content to local storage
 		localStorage.userEdits = userVersion;
 		// Write a confirmation to the user
-		document.querySelector("#update").innerHTML = "Edits saved";
-
+		document.querySelector("#update").innerHTML = "Changes saved";
+		document.querySelector("#update").style.backgroundColor = "lightgreen";
+		document.querySelector("#update").style.border = "1px solid";
 	};
+
 // Check if user has previously saved edits
 	function checkEdits() {
 		let textTwo = document.createTextNode("✓");
