@@ -134,12 +134,14 @@
 		edit[i].onclick = function() {
 		let div = this.parentElement;
 		// Make notes editable when clicked edit button
-		let noteEditable = document.querySelector("#myNotes").contentEditable;
+		let noteEditable = document.querySelector("#myNotes, #saved-notes").contentEditable;
 		if (noteEditable == 'inherit' || noteEditable == 'false') {
 			document.querySelector("#myNotes").contentEditable = true;
+			document.querySelector("#saved-notes").contentEditable = true;
 			textTwo.nodeValue = '✓';
 		} else {
 			document.querySelector("#myNotes").contentEditable = false;
+			document.querySelector("#saved-notes").contentEditable = false;
 			textTwo.nodeValue = ':';
 		  }
 	    }
