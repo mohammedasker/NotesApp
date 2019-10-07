@@ -1,5 +1,5 @@
 // SAVE THE NOTE
-// Save a note when clicked the save button
+// Create and save a new note when clicked the save button
 	function newElement() {
 		let li = document.createElement("li");
 		let inputvalue = document.querySelector("#myInput").value;
@@ -11,18 +11,36 @@
 			document.querySelector("#myNotes").appendChild(li);
 		}
 		document.querySelector("#myInput").value = '';
+
 		// Span edit button for each note
 		let spanTwo = document.createElement("span");
 	    textTwo = document.createTextNode("✓");
 	    spanTwo.className = "edit";
 	    spanTwo.appendChild(textTwo);
 	    li.appendChild(spanTwo);
+
 		// Spawn close button for each note
 		let span = document.createElement("span");
 		text = document.createTextNode("\u00D7");
 		span.className = "close";
 		span.appendChild(text);
 		li.appendChild(span);
+
+		// STORE SAVED NOTES IN LOCAL STORAGE
+		// Get the editable element
+		let editElement = document.querySelector("#saved-notes");
+		editElement = document.querySelector("#myNotes");
+		// Get the edited element content
+		let userVersion = editElement.innerHTML;
+		// Save the content to local storage
+		localStorage.userEdits = userVersion;
+		// Write a confirmation to the user
+		//document.querySelector("#update").innerHTML = "Changes saved";
+		//document.querySelector("#update").style.backgroundColor = "lightgreen";
+		//document.querySelector("#update").style.border = "1px solid";
+		/*Temporary comment away until found a way to save edited contents
+		 without throwing "Changes saved" message everytime save button is clicked*/
+
 		// Hide a saved note when clicked close button
 		for (i = 0; i < close.length; i++){
 			close[i].onclick = function() {
@@ -33,6 +51,7 @@
 	     for (i = 0; i < edit.length; i++){
 		edit[i].onclick = function() {
 		let div = this.parentElement;
+
 		// Make notes editable when clicked edit button
 		let noteEditable = document.querySelector("#myNotes").contentEditable;
 		if (noteEditable == 'inherit' || noteEditable == 'false') {
@@ -102,27 +121,12 @@
 	  nodeList[i].appendChild(span);
 	}
 
-// STORE SAVED NOTES IN LOCAL STORAGE
-// Open and edit the saved note when clicked the edit button
-	function saveNote() {
-		// Get the editable element
-		let editElement = document.querySelector("#saved-notes");
-		editElement = document.querySelector("#myNotes");
-		// Get the edited element content
-		let userVersion = editElement.innerHTML;
-		// Save the content to local storage
-		localStorage.userEdits = userVersion;
-		// Write a confirmation to the user
-		document.querySelector("#update").innerHTML = "Changes saved";
-		document.querySelector("#update").style.backgroundColor = "lightgreen";
-		document.querySelector("#update").style.border = "1px solid";
-	};
-
 // Check if user has previously saved edits
 	function checkEdits() {
 		let textTwo = document.createTextNode("✓");
 		if(localStorage.userEdits != null)
 			document.querySelector("#saved-notes").innerHTML = localStorage.userEdits;
+		
 		// Hide a saved note when clicked close button
 		for (i = 0; i < close.length; i++){
 			close[i].onclick = function() {
@@ -133,6 +137,7 @@
 	    for (i = 0; i < edit.length; i++){
 		edit[i].onclick = function() {
 		let div = this.parentElement;
+		
 		// Make notes editable when clicked edit button
 		let noteEditable = document.querySelector("#myNotes, #saved-notes").contentEditable;
 		if (noteEditable == 'inherit' || noteEditable == 'false') {

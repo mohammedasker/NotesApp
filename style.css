@@ -38,7 +38,7 @@ textarea {
 }
 
 /* Style the button*/
-.delete-button, .new-button, .save-button, .edit-button {
+.delete-button, .save-button{
   padding: 10px;
   background: #660066;
   color: white;
