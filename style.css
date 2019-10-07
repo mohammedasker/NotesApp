@@ -103,6 +103,6 @@ ul li:nth-child(odd){
 
 @media(max-width: 768px){
   textarea {
-    width: 94%;
+    width: 93%;
   }
 }
