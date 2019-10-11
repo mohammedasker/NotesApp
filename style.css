@@ -41,12 +41,11 @@ textarea {
 .delete-button, .save-button{
   padding: 10px;
   background: #660066;
-  color: white;
+  color: #ffffff;
   text-align: center;
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
-  border-radius: 0;
   border-radius: 10px;
   border: none;
   margin-bottom: 10px;
@@ -103,6 +102,6 @@ ul li:nth-child(odd){
 
 @media(max-width: 768px){
   textarea {
-    width: 93%;
+    width: 92%;
   }
 }

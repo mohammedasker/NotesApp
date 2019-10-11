@@ -34,12 +34,6 @@
 		let userVersion = editElement.innerHTML;
 		// Save the content to local storage
 		localStorage.userEdits = userVersion;
-		// Write a confirmation to the user
-		//document.querySelector("#update").innerHTML = "Changes saved";
-		//document.querySelector("#update").style.backgroundColor = "lightgreen";
-		//document.querySelector("#update").style.border = "1px solid";
-		/*Temporary comment away until found a way to save edited contents
-		 without throwing "Changes saved" message everytime save button is clicked*/
 
 		// Hide a saved note when clicked close button
 		for (i = 0; i < close.length; i++){
@@ -60,6 +54,10 @@
 		} else {
 			document.querySelector("#myNotes").contentEditable = false;
 			textTwo.nodeValue = ':';
+			// Write a confirmation to the user
+			document.querySelector("#update").innerHTML = "Changes saved";
+			document.querySelector("#update").style.backgroundColor = "lightgreen";
+			document.querySelector("#update").style.border = "1px solid";
 		  }
 	    }
 	  }
@@ -106,6 +104,10 @@
 		} else {
 			document.querySelector("#myNotes").contentEditable = false;
 			textTwo.nodeValue = ':';
+			// Write a confirmation to the user
+			document.querySelector("#update").innerHTML = "Changes saved";
+			document.querySelector("#update").style.backgroundColor = "lightgreen";
+			document.querySelector("#update").style.border = "1px solid";
 		}
 	  }
 	}
@@ -148,6 +150,10 @@
 			document.querySelector("#myNotes").contentEditable = false;
 			document.querySelector("#saved-notes").contentEditable = false;
 			textTwo.nodeValue = ':';
+			// Write a confirmation to the user
+			document.querySelector("#update").innerHTML = "Changes saved";
+			document.querySelector("#update").style.backgroundColor = "lightgreen";
+			document.querySelector("#update").style.border = "1px solid";
 		  }
 	    }
 	  }
