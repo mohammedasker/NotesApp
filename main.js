@@ -47,6 +47,7 @@
 		let div = this.parentElement;
 
 		// Make notes editable when clicked edit button
+		let hideMessage;
 		let noteEditable = document.querySelector("#myNotes").contentEditable;
 		if (noteEditable == 'inherit' || noteEditable == 'false') {
 			document.querySelector("#myNotes").contentEditable = true;
@@ -58,9 +59,13 @@
 			document.querySelector("#update").innerHTML = "Changes saved";
 			document.querySelector("#update").style.backgroundColor = "lightgreen";
 			document.querySelector("#update").style.border = "1px solid";
+			hideMessage = setTimeout(hideIt, 3000);
 		  }
 	    }
 	  }
+	}
+	function hideIt() {
+		document.querySelector("#update").style.display = "none";
 	}
 
 // DELETE THE NOTE
@@ -94,6 +99,7 @@
 // Click the edit button to edit notes
 	let edit = document.getElementsByClassName("edit");
 	i;
+	let hideMessage;
 	for (i = 0; i < edit.length; i++){
 		edit[i].onclick = function() {
 		let div = this.parentElement;
@@ -108,6 +114,7 @@
 			document.querySelector("#update").innerHTML = "Changes saved";
 			document.querySelector("#update").style.backgroundColor = "lightgreen";
 			document.querySelector("#update").style.border = "1px solid";
+			hideMessage = setTimeout(hideIt, 3000);
 		}
 	  }
 	}
@@ -141,6 +148,7 @@
 		let div = this.parentElement;
 		
 		// Make notes editable when clicked edit button
+		let hideMessage;
 		let noteEditable = document.querySelector("#myNotes, #saved-notes").contentEditable;
 		if (noteEditable == 'inherit' || noteEditable == 'false') {
 			document.querySelector("#myNotes").contentEditable = true;
@@ -154,6 +162,7 @@
 			document.querySelector("#update").innerHTML = "Changes saved";
 			document.querySelector("#update").style.backgroundColor = "lightgreen";
 			document.querySelector("#update").style.border = "1px solid";
+			hideMessage = setTimeout(hideIt, 3000);
 		  }
 	    }
 	  }
