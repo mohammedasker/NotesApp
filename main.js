@@ -1,12 +1,16 @@
 // SAVE THE NOTE
 // Create and save a new note when clicked the save button
 	function newElement() {
+		let hideEmptyTxt;
 		let li = document.createElement("li");
 		let inputvalue = document.querySelector("#myInput").value;
 		let savedNote = document.createTextNode(inputvalue);
 		li.appendChild(savedNote);
 		if (inputvalue === ''){
-			alert("Please write something")
+			document.querySelector("#emptytext").innerHTML= "Please write something";
+			document.querySelector("#emptytext").style.backgroundColor = "pink";
+			document.querySelector("#emptytext").style.border = "1px solid";
+			hideEmptyTxt = setTimeout(spanEmptytxt, 3000); // hide message in 3secs
 		} else {
 			document.querySelector("#myNotes").appendChild(li);
 		}
@@ -59,13 +63,18 @@
 			document.querySelector("#update").innerHTML = "Changes saved";
 			document.querySelector("#update").style.backgroundColor = "lightgreen";
 			document.querySelector("#update").style.border = "1px solid";
-			hideMessage = setTimeout(hideIt, 3000);
+			hideMessage = setTimeout(hideIt, 3000); // hide message in 3secs
 		  }
 	    }
 	  }
 	}
+	// Make "Changes saved" disappear after 3 seconds
 	function hideIt() {
 		document.querySelector("#update").style.display = "none";
+	}
+	// Make "empty" disappear after 3 seconds
+	function spanEmptytxt() {
+		document.querySelector("#emptytext").style.display = "none";
 	}
 
 // DELETE THE NOTE
@@ -114,7 +123,7 @@
 			document.querySelector("#update").innerHTML = "Changes saved";
 			document.querySelector("#update").style.backgroundColor = "lightgreen";
 			document.querySelector("#update").style.border = "1px solid";
-			hideMessage = setTimeout(hideIt, 3000);
+			hideMessage = setTimeout(hideIt, 3000); // hide message in 3secs
 		}
 	  }
 	}
@@ -162,7 +171,7 @@
 			document.querySelector("#update").innerHTML = "Changes saved";
 			document.querySelector("#update").style.backgroundColor = "lightgreen";
 			document.querySelector("#update").style.border = "1px solid";
-			hideMessage = setTimeout(hideIt, 3000);
+			hideMessage = setTimeout(hideIt, 3000); // hide message in 3secs
 		  }
 	    }
 	  }

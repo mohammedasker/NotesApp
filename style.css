@@ -102,6 +102,15 @@ ul li:nth-child(odd){
   border-color: green;
 }
 
+/* Style the changes saved message*/
+#emptytext {
+  margin-bottom: 10px;
+  color: red;
+  text-align: center;
+  padding: 12px;
+  border-color: red;
+}
+
 @media(max-width: 768px){
   textarea {
     width: 92%;
