@@ -70,11 +70,15 @@
 	}
 	// Make "Changes saved" disappear after 3 seconds
 	function hideIt() {
-		document.querySelector("#update").style.display = "none";
+		document.querySelector("#update").innerHTML = "";
+		document.querySelector("#update").style.backgroundColor = "transparent";
+		document.querySelector("#update").style.border = "none";
 	}
 	// Make "empty" disappear after 3 seconds
 	function spanEmptytxt() {
-		document.querySelector("#emptytext").style.display = "none";
+		document.querySelector("#emptytext").innerHTML = "";
+		document.querySelector("#emptytext").style.backgroundColor = "transparent";
+		document.querySelector("#emptytext").style.border = "none";
 	}
 
 // DELETE THE NOTE
