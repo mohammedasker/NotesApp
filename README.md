@@ -4,14 +4,35 @@ A minimalist note-taking web app build by the minimalist, for the minimalist. Th
 
 ## Live Demo
 
-You can check the project by the clicking this link below:
+You can check the project by the clicking the link below:
 
-https://mohammedasker.github.io/NotesApp/.
+[NoteApp]("https://mohammedasker.github.io/NoteApp//").
+
+## Getting Started
+
+There are two ways you can get a copy of my repository and choose which one you prefer.
+
+**Option 1: Clone the repo**
+
+1. Open the Git Bash and type this:
+
+```
+git clone https://github.com/mohammedasker/NoteApp.git
+```
+
+2. Press Enter key. Your local clone will be created.
+
+**Option 2: Download the Zip file**
+
+1. Under the repository name, click Clone or download
+
+2. Click the Download ZIP. A download will start and be saved on your Download folder.
 
 ## User story
+
 Here's what the user can do with the app.
 
-1. A user can create a new note by writing on a textarea.
+1. A user can create a new note by writing on a textarea. (When a user click "Save" button with an empty box, it will throw "Please Write Something" message)
 
 2. When a user finish writing a content and clicked a "Save" button, it will spawn a saved note below.
 
@@ -23,9 +44,9 @@ Here's what the user can do with the app.
 
 ## Issues that need to be fixed
 
-As a beginner programmer, there are a lot of things that can be improved to make this project better and here I listed the following points which needs to deal with:
+As a beginner programmer, there are a lot of things that can be improved to make this project better and here I list the following points which needs to deal with:
 
--  When a note is created, it should be uneditable by default. You'll notice the button on the right is tick mark "✓" and it's already editable. Consequently, when you delete the note when it is tick mark, the blank page is still editable as well.
+- When a note is created, it should be uneditable by default. You'll notice the button on the right is tick mark "✓" and yet it still editable. Consequently, when you delete the note when it is tick mark, the blank page is editable as well.
 
 - If you look carefully both in my CSS code and the app itself, you'll see that the textarea and note lists are not perfectly aligned together and they're off by few meters on the right side of the screen. There's got to be better way to do it without manually tweaking the code until it looks better. (If you still don't get the problem yet, I'll attach a photo below shortly).
 
@@ -34,8 +55,18 @@ As a beginner programmer, there are a lot of things that can be improved to make
 #### Any further comments and suggestions to make the project better are appreicated.
 
 ## Versions
+
 <b>Current version: 1.0.1</b>
+
 <ul>
 	<li>1.0.0 (04/10/2019)</li>
 	<li>1.0.1 (07/10/2019)</li>
 </ul>
+
+## Authors
+
+- [@MohammedAsker](https://github.com/mohammedasker) - Idea & Initial work
+
+## License
+
+This project is licensed under the [MIT](https://github.com/mohammedasker/NoteApp/blob/master/LICENSE) license.
