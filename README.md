@@ -6,7 +6,7 @@ A minimalist note-taking web app build by the minimalist, for the minimalist. Th
 
 You can check the project by the clicking the link below:
 
-[NoteApp](https://mohammedasker.github.io/NoteApp//)
+[NoteApp](https://mohammedasker.github.io/NotesApp//)
 
 ## Getting Started
 
