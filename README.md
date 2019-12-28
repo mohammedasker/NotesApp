@@ -1,12 +1,12 @@
 # SIMPLE NOTE APP
 
-A minimalist note-taking web app build by the minimalist, for the minimalist. This web app is created using only HTML, CSS, and Vanilla JavaScript. No libaries or frameworks were used.
+A minimalist note-taking web app build by the minimalist, for the minimalist. This web app is created using only HTML, CSS, and Vanilla JavaScript. No libraries or frameworks were used.
 
 ## Live Demo
 
 You can check the project by the clicking the link below:
 
-[NoteApp]("https://mohammedasker.github.io/NoteApp//").
+[NoteApp](https://mohammedasker.github.io/NoteApp//)
 
 ## Getting Started
 
@@ -46,13 +46,13 @@ Here's what the user can do with the app.
 
 As a beginner programmer, there are a lot of things that can be improved to make this project better and here I list the following points which needs to deal with:
 
-- When a note is created, it should be uneditable by default. You'll notice the button on the right is tick mark "✓" and yet it still editable. Consequently, when you delete the note when it is tick mark, the blank page is editable as well.
+- When a note is created, it should be not editable by default. You'll notice the button on the right is tick mark "✓" and yet it still editable. Consequently, when you delete the note when it is tick mark, the blank page is editable as well.
 
 - If you look carefully both in my CSS code and the app itself, you'll see that the textarea and note lists are not perfectly aligned together and they're off by few meters on the right side of the screen. There's got to be better way to do it without manually tweaking the code until it looks better. (If you still don't get the problem yet, I'll attach a photo below shortly).
 
 - When clicking the edit button, only one of them is toggling tick to colon marks and vice-versa. It should have worked on all the notes.
 
-#### Any further comments and suggestions to make the project better are appreicated.
+#### Any further comments and suggestions to make the project better are appreciated.
 
 ## Versions
 
@@ -69,4 +69,4 @@ As a beginner programmer, there are a lot of things that can be improved to make
 
 ## License
 
-This project is licensed under the [MIT](https://github.com/mohammedasker/NoteApp/blob/master/LICENSE) license.
+This project is licensed under the [MIT](https://github.com/mohammedasker/NotesApp/blob/master/LICENSE) license.
